@@ -1,13 +1,21 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LY SOREN — Software Engineer & Instructor</title>
-  <meta name="description" content="Portfolio of LY SOREN — Software Engineer & ICT/Scratch Instructor. Web, mobile, and teaching-focused projects." />
+  <meta name="description"
+    content="Portfolio of LY SOREN — Software Engineer & ICT/Scratch Instructor. Web, mobile, and teaching-focused projects." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Devicon (skill logos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -26,6 +34,7 @@
       <a href="#experience">Experience</a>
       <a href="#teaching">Teaching</a>
       <a href="#projects">Projects</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
 
@@ -33,7 +42,24 @@
       <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">
         <span class="icon" aria-hidden="true">☾</span>
       </button>
-      <button class="icon-btn burger" id="menuBtn" type="button" aria-label="Open menu">
+      <!-- Color Palette Button -->
+      <button id="paletteBtn" class="icon-btn" aria-label="Change color theme">
+        🎨
+      </button>
+
+      <!-- Palette Picker -->
+      <div id="palettePanel" class="palette-panel">
+
+        <button class="palette-option" data-color="#7c5cff"></button>
+        <button class="palette-option" data-color="#16e0bd"></button>
+        <button class="palette-option" data-color="#ff4fd8"></button>
+        <button class="palette-option" data-color="#ff7a18"></button>
+        <button class="palette-option" data-color="#00c6ff"></button>
+        <button class="palette-option" data-color="#ff3d3d"></button>
+
+      </div>
+      <button class="icon-btn burger" id="menuBtn" type="button" aria-label="Open menu" aria-controls="drawer"
+        aria-expanded="false">
         <span aria-hidden="true">☰</span>
       </button>
     </div>
@@ -51,12 +77,13 @@
       <a href="#experience" class="drawer-link">Experience</a>
       <a href="#teaching" class="drawer-link">Teaching</a>
       <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#pricing" class="drawer-link">Pricing</a>
       <a href="#contact" class="drawer-link">Contact</a>
     </div>
   </aside>
   <div class="backdrop" id="backdrop" aria-hidden="true"></div>
 
-  <main id="home">
+  <main id="home" tabindex="-1">
     <!-- HERO -->
     <section class="hero section">
       <div class="hero-left">
@@ -72,7 +99,7 @@
 
         <p class="subhead">
           Dedicated instructor and developer with experience in Scratch for young learners,
-          curriculum writing, web development (HTML/CSS/JS), and programming fundamentals. 
+          curriculum writing, web development (HTML/CSS/JS), and programming fundamentals.
         </p>
 
         <div class="hero-cta">
@@ -166,7 +193,7 @@
           </div>
           <div class="info-row">
             <span class="info-k">Location</span>
-            <span class="info-v">Dangkao, Phnom Penh</span>
+            <span class="info-v">Russey Keo, Phnom Penh</span>
           </div>
         </div>
 
@@ -174,57 +201,175 @@
 
         <h3 class="h3">Education</h3>
         <ul class="bullets">
-          <li><strong>BE L T E I International University</strong> — BSE Software Engineering (2021–2025)</li>
-          <li><strong>BE L T E I International University</strong> — MSE Software Engineering (2025–Present)</li>
+          <li><strong>B E L T E I International University</strong> — Bachelor of IT in Software Engineering (2021–2025)
+          </li>
+          <li><strong>B E L T E I International University</strong> — Master of IT in Software Engineering
+            (2025–Present)</li>
         </ul>
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS (UPDATED WITH ICONS) -->
     <section id="skills" class="section">
       <div class="section-head">
         <h2>Skills</h2>
-        <!-- <p class="muted">A mix of development + teaching-focused tools, aligned with your CV. </p> -->
       </div>
 
       <div class="skills-grid">
+        <!-- Programming -->
         <div class="card reveal">
           <h3 class="h3">Programming</h3>
-          <div class="chips-wrap">
-            <span class="chip">Scratch (Teaching)</span>
-            <span class="chip">C++</span>
-            <span class="chip">C#</span>
-            <span class="chip">Java</span>
-            <span class="chip">Python</span>
-            <span class="chip">OOP</span>
+
+          <div class="skills-icons">
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">S</span></div>
+              <div class="skill-name">Scratch</div>
+              <div class="skill-sub">Teaching</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-cplusplus-plain colored"></i></div>
+              <div class="skill-name">C++</div>
+              <div class="skill-sub">Foundations</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-csharp-plain colored"></i></div>
+              <div class="skill-name">C#</div>
+              <div class="skill-sub">OOP</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-java-plain colored"></i></div>
+              <div class="skill-name">Java</div>
+              <div class="skill-sub">Projects</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-python-plain colored"></i></div>
+              <div class="skill-name">Python</div>
+              <div class="skill-sub">Basics</div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">OOP</span></div>
+              <div class="skill-name">OOP</div>
+              <div class="skill-sub">Concepts</div>
+            </div>
           </div>
         </div>
 
+        <!-- Web & Mobile -->
         <div class="card reveal" style="--d:120ms">
           <h3 class="h3">Web & Mobile</h3>
-          <div class="chips-wrap">
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">PHP</span>
-            <span class="chip">Laravel</span>
-            <span class="chip">Flutter (Dart)</span>
-            <span class="chip">Kotlin (Basic)</span>
+
+          <div class="skills-icons">
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-html5-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">HTML</div>
+                <div class="skill-sub">Structure</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-css3-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">CSS</div>
+                <div class="skill-sub">Responsive UI</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-javascript-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-sub">Frontend</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-php-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">PHP</div>
+                <div class="skill-sub">Backend</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-laravel-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">Laravel</div>
+                <div class="skill-sub">MVC</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-flutter-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">Flutter</div>
+                <div class="skill-sub">Mobile</div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Database & Tools -->
         <div class="card reveal" style="--d:240ms">
           <h3 class="h3">Database & Tools</h3>
-          <div class="chips-wrap">
-            <span class="chip">Oracle</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Figma</span>
-            <span class="chip">Canva</span>
-            <span class="chip">Photoshop</span>
-            <span class="chip">MS Office</span>
+
+          <div class="skills-icons">
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">SQL</span></div>
+              <div class="skill-text">
+                <div class="skill-name">SQL</div>
+                <div class="skill-sub">Queries</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">DB</span></div>
+              <div class="skill-text">
+                <div class="skill-name">Oracle</div>
+                <div class="skill-sub">Database</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><i class="devicon-figma-plain colored"></i></div>
+              <div class="skill-text">
+                <div class="skill-name">Figma</div>
+                <div class="skill-sub">UI Design</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">C</span></div>
+              <div class="skill-text">
+                <div class="skill-name">Canva</div>
+                <div class="skill-sub">Design</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">Ps</span></div>
+              <div class="skill-text">
+                <div class="skill-name">Photoshop</div>
+                <div class="skill-sub">Editing</div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-ico"><span style="font-weight:900;">MS</span></div>
+              <div class="skill-text">
+                <div class="skill-name">MS Office</div>
+                <div class="skill-sub">Word/Excel/PPT</div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Soft Skills (kept as bullets) -->
         <div class="card reveal" style="--d:360ms">
           <h3 class="h3">Soft Skills</h3>
           <ul class="bullets">
@@ -241,14 +386,28 @@
     <section id="experience" class="section">
       <div class="section-head">
         <h2>Experience</h2>
-        <!-- <p class="muted">Teaching, curriculum writing, and technical training experience. :contentReference[oaicite:1]{index=1}</p> -->
       </div>
 
       <div class="timeline">
+        <article class="t-item card reveal" style="--d:120ms">
+          <div class="t-top">
+            <h3 class="h3">Media & IT Support Assistant</h3>
+            <span class="tag">Paññāsāstra International School - Tuol Kork • Feb 2026 — Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Captured and edited photos for school events, announcements, and reports.</li>
+            <li>Designed posters and promotional materials for school programs and activities.</li>
+            <li>Edited short videos for school social media (subtitles, trimming, transitions, basic audio cleanup).
+            </li>
+            <li>Handled administrative tasks assigned by the School Principal and supported daily operations.</li>
+            <li>Provided IT support to teachers and staff (setup assistance, troubleshooting, and software help).</li>
+          </ul>
+        </article>
+
         <article class="t-item card reveal">
           <div class="t-top">
             <h3 class="h3">Curriculum Writer & Learning Facilitator</h3>
-            <span class="tag">Snoopedu Education • Jun 2025 — Present</span>
+            <span class="tag">Snoopedu Education • Jun 2025 — Jan 2026</span>
           </div>
           <ul class="bullets">
             <li>Designed structured courses: Computer Basics, Scratch, Intro Web Dev (HTML/CSS).</li>
@@ -256,7 +415,7 @@
           </ul>
         </article>
 
-        <article class="t-item card reveal" style="--d:120ms">
+        <article class="t-item card reveal" style="--d:240ms">
           <div class="t-top">
             <h3 class="h3">Office Assistant & Computer Instructor</h3>
             <span class="tag">BELTEI Int’l University • Dec 2023 — Jun 2024</span>
@@ -268,7 +427,7 @@
           </ul>
         </article>
 
-        <article class="t-item card reveal" style="--d:240ms">
+        <article class="t-item card reveal" style="--d:360ms">
           <div class="t-top">
             <h3 class="h3">Volunteer Computer Instructor</h3>
             <span class="tag">BELTEI Int’l University • Jan 2023 — Dec 2023</span>
@@ -316,9 +475,9 @@
           <div class="list-item">MS Office (Word/Excel/PPT)</div>
         </div>
         <div class="divider"></div>
-        <p class="muted small">
+        <!-- <p class="muted small">
           Want this section to show your class photos, certificates, or lesson samples? Add them and I’ll format it.
-        </p>
+        </p> -->
       </div>
     </section>
 
@@ -326,7 +485,7 @@
     <section id="projects" class="section">
       <div class="section-head">
         <h2>Projects</h2>
-        <p class="muted">Add your real projects here (GitHub links, screenshots, live demos).</p>
+        <!-- <p class="muted">Add your real projects here (GitHub links, screenshots, live demos).</p> -->
       </div>
 
       <div class="projects-grid">
@@ -374,6 +533,71 @@
       </div>
     </section>
 
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="section-head">
+        <h2>Freelance Pricing</h2>
+        <p class="muted">Affordable digital services for businesses, schools, and organizations.</p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Design Services -->
+        <div class="card pricing-card reveal">
+          <h3 class="h3">Design Services</h3>
+          <div class="price">$10 - $80</div>
+
+          <ul class="bullets">
+            <li>Logo Design — $20 - $60</li>
+            <li>Poster / Flyer — $10 - $25</li>
+            <li>Banner Design — $15 - $30</li>
+            <li>Social Media Post — $10+</li>
+            <li>Photo Editing — $5+</li>
+          </ul>
+
+          <a href="#contact" class="btn primary small">Order Design</a>
+        </div>
+
+        <!-- Website -->
+        <div class="card pricing-card highlight reveal">
+          <h3 class="h3">Website Development</h3>
+          <div class="price">$120 - $400</div>
+
+          <ul class="bullets">
+            <li>1–3 Page Website — $120+</li>
+            <li>Business Website — $200+</li>
+            <li>Portfolio Website — $150+</li>
+            <li>Responsive Design</li>
+            <li>Contact Form Integration</li>
+          </ul>
+
+          <a href="#contact" class="btn primary small">Order Website</a>
+        </div>
+
+        <!-- System -->
+        <div class="card pricing-card reveal">
+          <h3 class="h3">System Development</h3>
+          <div class="price">$700+</div>
+
+          <ul class="bullets">
+            <li>Inventory System</li>
+            <li>School Management System</li>
+            <li>Booking System</li>
+            <li>Custom Admin Dashboard</li>
+            <li>Database & Reports</li>
+          </ul>
+
+          <a href="#contact" class="btn primary small">Request Quote</a>
+        </div>
+
+      </div>
+
+      <p class="muted small" style="margin-top:16px;">
+        *Prices may vary depending on project complexity and features required. <br>
+        *Discount available for schools, NGOs, and long-term collaboration.
+      </p>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="contact card reveal">
@@ -390,7 +614,8 @@
             </div>
             <div class="contact-row">
               <span class="contact-k">Telegram</span>
-              <span class="contact-v"><a href="https://t.me/soren_ly" target="_blank" rel="noreferrer">@soren_ly</a></span>
+              <span class="contact-v"><a href="https://t.me/soren_ly" target="_blank"
+                  rel="noreferrer">@soren_ly</a></span>
             </div>
             <div class="contact-row">
               <span class="contact-k">Phone</span>
@@ -406,7 +631,7 @@
           </label>
           <label class="field">
             <span>Email</span>
-            <input type="email" name="email" placeholder="sorenly333@gamil.com" required />
+            <input type="email" name="email" placeholder="sorenly333@gmail.com" required />
           </label>
           <label class="field">
             <span>Message</span>
@@ -425,7 +650,123 @@
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+  <!-- Welcome Popup -->
+  <div id="welcomePopup" class="welcome-popup" aria-hidden="true">
+    <div class="welcome-card">
+      <h3>👋 Welcome!</h3>
 
+      <p>
+        Thank you for visiting my portfolio.<br><br>
+        If you need <strong>Design Services</strong>,
+        <strong>Website Development</strong>, or
+        <strong>System Development</strong>, feel free to contact me on Telegram.
+      </p>
+
+      <div class="welcome-actions">
+        <a href="https://t.me/soren_ly" target="_blank" rel="noreferrer" class="btn primary small">
+          Contact via Telegram
+        </a>
+
+        <button id="closeWelcome" class="btn small subtle" type="button">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Floating Chatbot (Pricing Helper) -->
+  <button class="chat-fab" id="chatFab" aria-label="Open assistant">
+    💬
+  </button>
+
+  <div class="chat-widget" id="chatWidget" aria-hidden="true">
+    <div class="chat-header">
+      <div class="chat-title">
+        <div class="chat-dot" aria-hidden="true"></div>
+        <div>
+          <div class="chat-name">Soren Assistant</div>
+          <div class="chat-sub">Pricing & Contact</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="chatCloseBtn" type="button" aria-label="Close assistant">✕</button>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-bubble bot">
+        👋 Hi! Welcome to my portfolio. <br><br>
+        If you want details about <strong>Design Services</strong>, <strong>Website Development</strong>, or
+        <strong>System Development</strong>, I can show you pricing quickly — or you can message me on Telegram.
+      </div>
+
+      <div class="chat-actions">
+        <button class="btn primary small" id="openPricingBtn" type="button">View Pricing</button>
+        <a class="btn small" href="https://t.me/soren_ly" target="_blank" rel="noreferrer">Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Popup (Floating Table) -->
+  <div class="pricing-popup" id="pricingPopup" aria-hidden="true">
+    <div class="pricing-popup-card">
+      <div class="pricing-popup-head">
+        <div>
+          <div class="pricing-popup-title">Quick Pricing</div>
+          <div class="pricing-popup-sub muted small">Cambodia-friendly rates (estimate)</div>
+        </div>
+        <button class="icon-btn" id="pricingCloseBtn" type="button" aria-label="Close pricing">✕</button>
+      </div>
+
+      <div class="pricing-popup-grid">
+        <div class="pricing-mini card">
+          <div class="h3">Design</div>
+          <div class="price-mini">$10 – $80</div>
+          <ul class="bullets">
+            <li>Poster/Flyer: $10–$25</li>
+            <li>Banner: $15–$30</li>
+            <li>Logo: $20–$60</li>
+            <li>Photo edit: $5+</li>
+          </ul>
+        </div>
+
+        <div class="pricing-mini card">
+          <div class="h3">Website</div>
+          <div class="price-mini">$120 – $400</div>
+          <ul class="bullets">
+            <li>1–3 pages: $120+</li>
+            <li>Portfolio: $150+</li>
+            <li>Business: $200+</li>
+            <li>Responsive + contact form</li>
+          </ul>
+        </div>
+
+        <div class="pricing-mini card">
+          <div class="h3">System</div>
+          <div class="price-mini">$700+</div>
+          <ul class="bullets">
+            <li>Login + Dashboard</li>
+            <li>CRUD + Database</li>
+            <li>Reports</li>
+            <li>Custom features</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-popup-actions">
+        <a class="btn primary small" href="https://t.me/soren_ly" target="_blank" rel="noreferrer">
+          Message on Telegram
+        </a>
+        <a class="btn small" href="#pricing">Go to Pricing Section</a>
+      </div>
+
+      <p class="muted small" style="margin-top:10px;">
+        *Final price depends on project requirements.
+      </p>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
+
 </html>
