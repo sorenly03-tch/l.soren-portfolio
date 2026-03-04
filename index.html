@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LY SOREN — Software Engineer & Instructor</title>
+  <meta name="description" content="Portfolio of LY SOREN — Software Engineer & ICT/Scratch Instructor. Web, mobile, and teaching-focused projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Go to top">
+      <span class="brand-dot"></span>
+      <span class="brand-text">LY SOREN</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+        <span class="icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="icon-btn burger" id="menuBtn" type="button" aria-label="Open menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-title">Menu</span>
+      <button class="icon-btn" id="closeDrawerBtn" type="button" aria-label="Close menu">✕</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#skills" class="drawer-link">Skills</a>
+      <a href="#experience" class="drawer-link">Experience</a>
+      <a href="#teaching" class="drawer-link">Teaching</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="hero-left">
+        <p class="kicker">
+          <span class="pill">Software Engineer</span>
+          <span class="pill ghost">ICT • Scratch • Web Dev Instructor</span>
+        </p>
+
+        <h1 class="headline">
+          I build <span class="grad">clean apps</span> and teach
+          <span class="grad2">coding</span> with clarity.
+        </h1>
+
+        <p class="subhead">
+          Dedicated instructor and developer with experience in Scratch for young learners,
+          curriculum writing, web development (HTML/CSS/JS), and programming fundamentals. 
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Hire / Collaborate</a>
+          <button class="btn subtle" id="copyEmailBtn" type="button" data-copy="sorenly333@gmail.com">
+            Copy Email
+          </button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">Web • Mobile</div>
+            <div class="stat-label">HTML/CSS/JS • Flutter</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Teach + Build</div>
+            <div class="stat-label">Scratch • MS Office • OOP</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">UI/UX</div>
+            <div class="stat-label">Figma • Canva • Photoshop</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait-card reveal">
+          <div class="portrait-top">
+            <img src="IMG_19639.jpg" alt="LY SOREN formal photo" class="portrait" />
+            <div class="portrait-glow" aria-hidden="true"></div>
+          </div>
+
+          <div class="portrait-meta">
+            <div>
+              <div class="name">LY SOREN</div>
+              <div class="role">Software Engineer • Instructor</div>
+            </div>
+            <div class="chips">
+              <span class="chip">Phnom Penh</span>
+              <span class="chip">Khmer • English</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-gallery reveal" style="--d:120ms">
+          <img src="DSC04930-Enhanced-NR.jpg" alt="LY SOREN at an event" class="gallery-img" />
+          <div class="gallery-note">
+            <div class="gallery-title">Teaching & Community</div>
+            <div class="gallery-sub">Curriculum • Workshops • Class facilitation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section grid-2">
+      <div class="card reveal">
+        <h2>About</h2>
+        <p>
+          I’m an ICT, Scratch, and Software Engineering instructor who also builds real products.
+          I enjoy creating engaging learning materials and simplifying complex concepts for students
+          from primary level to university level.
+        </p>
+        <div class="highlights">
+          <div class="hl">
+            <div class="hl-title">What I do</div>
+            <div class="hl-text">Web apps • Mobile apps • Curriculum design • Teaching</div>
+          </div>
+          <div class="hl">
+            <div class="hl-title">What I value</div>
+            <div class="hl-text">Clarity • Practice-first learning • Clean UI • Consistency</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="--d:120ms">
+        <h2>Quick Info</h2>
+        <div class="info">
+          <div class="info-row">
+            <span class="info-k">Email</span>
+            <span class="info-v"><a href="mailto:sorenly333@gmail.com">sorenly333@gmail.com</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-k">Telegram</span>
+            <span class="info-v"><a href="https://t.me/soren_ly" target="_blank" rel="noreferrer">@soren_ly</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-k">Phone</span>
+            <span class="info-v"><a href="tel:+855977270074">+855 97 727 0074</a></span>
+          </div>
+          <div class="info-row">
+            <span class="info-k">Location</span>
+            <span class="info-v">Dangkao, Phnom Penh</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="h3">Education</h3>
+        <ul class="bullets">
+          <li><strong>BE L T E I International University</strong> — BSE Software Engineering (2021–2025)</li>
+          <li><strong>BE L T E I International University</strong> — MSE Software Engineering (2025–Present)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <!-- <p class="muted">A mix of development + teaching-focused tools, aligned with your CV. </p> -->
+      </div>
+
+      <div class="skills-grid">
+        <div class="card reveal">
+          <h3 class="h3">Programming</h3>
+          <div class="chips-wrap">
+            <span class="chip">Scratch (Teaching)</span>
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">OOP</span>
+          </div>
+        </div>
+
+        <div class="card reveal" style="--d:120ms">
+          <h3 class="h3">Web & Mobile</h3>
+          <div class="chips-wrap">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">Flutter (Dart)</span>
+            <span class="chip">Kotlin (Basic)</span>
+          </div>
+        </div>
+
+        <div class="card reveal" style="--d:240ms">
+          <h3 class="h3">Database & Tools</h3>
+          <div class="chips-wrap">
+            <span class="chip">Oracle</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Figma</span>
+            <span class="chip">Canva</span>
+            <span class="chip">Photoshop</span>
+            <span class="chip">MS Office</span>
+          </div>
+        </div>
+
+        <div class="card reveal" style="--d:360ms">
+          <h3 class="h3">Soft Skills</h3>
+          <ul class="bullets">
+            <li>Good communication</li>
+            <li>Good work attitude</li>
+            <li>Commitment</li>
+            <li>Flexible & adaptive</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <!-- <p class="muted">Teaching, curriculum writing, and technical training experience. :contentReference[oaicite:1]{index=1}</p> -->
+      </div>
+
+      <div class="timeline">
+        <article class="t-item card reveal">
+          <div class="t-top">
+            <h3 class="h3">Curriculum Writer & Learning Facilitator</h3>
+            <span class="tag">Snoopedu Education • Jun 2025 — Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Designed structured courses: Computer Basics, Scratch, Intro Web Dev (HTML/CSS).</li>
+            <li>Taught practical lessons based on developed curriculum.</li>
+          </ul>
+        </article>
+
+        <article class="t-item card reveal" style="--d:120ms">
+          <div class="t-top">
+            <h3 class="h3">Office Assistant & Computer Instructor</h3>
+            <span class="tag">BELTEI Int’l University • Dec 2023 — Jun 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Taught MS Office (Word, Excel, PowerPoint).</li>
+            <li>Led junior supplementary classes: C++, C#, HTML, CSS.</li>
+            <li>Handled admin & operational support tasks.</li>
+          </ul>
+        </article>
+
+        <article class="t-item card reveal" style="--d:240ms">
+          <div class="t-top">
+            <h3 class="h3">Volunteer Computer Instructor</h3>
+            <span class="tag">BELTEI Int’l University • Jan 2023 — Dec 2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Delivered MS Office courses for diverse learner groups.</li>
+            <li>Led foundational programming modules (C++, C#) and web basics.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="section grid-2">
+      <div class="card reveal">
+        <h2>Teaching Style</h2>
+        <p>
+          I teach by breaking complex ideas into simple steps, then letting students practice.
+          I create age-appropriate materials—especially for Scratch learners—and focus on results.
+        </p>
+        <div class="teaching-cards">
+          <div class="mini">
+            <div class="mini-title">Practice-first</div>
+            <div class="mini-text">Short demos → guided exercises → mini projects.</div>
+          </div>
+          <div class="mini">
+            <div class="mini-title">Clear explanations</div>
+            <div class="mini-text">Simple language + visuals + real examples.</div>
+          </div>
+          <div class="mini">
+            <div class="mini-title">Curriculum design</div>
+            <div class="mini-text">Structured modules with outcomes and assessments.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="--d:120ms">
+        <h2>What I can teach</h2>
+        <div class="list-grid">
+          <div class="list-item">Computer Basics</div>
+          <div class="list-item">Scratch Programming</div>
+          <div class="list-item">HTML/CSS/JS</div>
+          <div class="list-item">OOP Concepts</div>
+          <div class="list-item">C++ / C# Foundations</div>
+          <div class="list-item">MS Office (Word/Excel/PPT)</div>
+        </div>
+        <div class="divider"></div>
+        <p class="muted small">
+          Want this section to show your class photos, certificates, or lesson samples? Add them and I’ll format it.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">Add your real projects here (GitHub links, screenshots, live demos).</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card project reveal">
+          <div class="project-top">
+            <h3 class="h3">Inventory System</h3>
+            <span class="tag">Java / SQL</span>
+          </div>
+          <p class="muted">
+            A simple inventory management system with role-based access and CRUD modules.
+          </p>
+          <div class="project-actions">
+            <a class="btn small" href="#" aria-disabled="true">Live Demo</a>
+            <a class="btn small subtle" href="#" aria-disabled="true">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project reveal" style="--d:120ms">
+          <div class="project-top">
+            <h3 class="h3">Teaching Curriculum Pack</h3>
+            <span class="tag">Scratch / Web</span>
+          </div>
+          <p class="muted">
+            Structured lessons, worksheets, and mini-projects for beginners (kids → teens).
+          </p>
+          <div class="project-actions">
+            <a class="btn small" href="#" aria-disabled="true">Preview</a>
+            <a class="btn small subtle" href="#" aria-disabled="true">Docs</a>
+          </div>
+        </article>
+
+        <article class="card project reveal" style="--d:240ms">
+          <div class="project-top">
+            <h3 class="h3">Modern Portfolio UI</h3>
+            <span class="tag">HTML / CSS / JS</span>
+          </div>
+          <p class="muted">
+            This portfolio template: responsive layout, animation, and theme switching.
+          </p>
+          <div class="project-actions">
+            <a class="btn small" href="#contact">Use this design</a>
+            <a class="btn small subtle" href="#skills">See skills</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="contact card reveal">
+        <div class="contact-left">
+          <h2>Let’s work together</h2>
+          <p class="muted">
+            Need a developer, a tutor, or a curriculum designer? Message me and I’ll reply quickly.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-row">
+              <span class="contact-k">Email</span>
+              <span class="contact-v"><a href="mailto:sorenly333@gmail.com">sorenly333@gmail.com</a></span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-k">Telegram</span>
+              <span class="contact-v"><a href="https://t.me/soren_ly" target="_blank" rel="noreferrer">@soren_ly</a></span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-k">Phone</span>
+              <span class="contact-v"><a href="tel:+855977270074">+855 97 727 0074</a></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="sorenly333@gamil.com" required />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me about your project / class..." required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p class="muted small" id="formHint">This will open your email app (mailto).</p>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> LY SOREN</div>
+        <div class="muted small">Built with HTML • CSS • JavaScript</div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
