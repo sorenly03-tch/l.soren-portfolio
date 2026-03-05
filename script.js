@@ -339,3 +339,15 @@ document.addEventListener("keydown", (e) => {
 window.addEventListener("scroll", () => {
   closeChat();
 });
+
+document.querySelectorAll('a[href="#pricing"]').forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    if (pricingPopup.classList.contains("show")) {
+      closePricingPopup();
+    }
+
+  });
+
+});

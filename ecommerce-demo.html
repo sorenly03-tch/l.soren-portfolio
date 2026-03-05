@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-Commerce Demo — LY SOREN</title>
+
+  <!-- Use your existing portfolio styles (variables, buttons, toast, etc.) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Demo-only styles -->
+  <link rel="stylesheet" href="ecommerce.css" />
+</head>
+
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <main class="shop-page">
+    <div class="shop-topbar">
+      <div class="shop-row">
+        <div class="shop-brand">
+          <span class="dot"></span>
+          <div>
+            Modern Shop Demo
+            <small>UI demo for portfolio • no backend</small>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <div class="search" role="search">
+            <span aria-hidden="true">🔎</span>
+            <input id="searchInput" type="search" placeholder="Search products (ex: laptop, bag, watch)..." />
+            <span class="hint">Enter to search</span>
+          </div>
+
+          <button class="icon-btn mobile-cart-btn" id="openCartDrawerBtn" type="button" aria-label="Open cart">
+            🛒 <span class="badge" id="cartCountBadge2">0</span>
+          </button>
+        </div>
+
+        <div class="shop-actions">
+          <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="Toggle theme">☾</button>
+
+          <button class="icon-btn" id="wishlistBtn" type="button" aria-label="Open wishlist">
+            ❤️ <span class="badge" id="wishCountBadge">0</span>
+          </button>
+
+          <button class="icon-btn" id="checkoutBtnTop" type="button" aria-label="Checkout">
+            🧾 Checkout
+          </button>
+
+          <button class="icon-btn" id="cartBtnTop" type="button" aria-label="Cart">
+            🛒 <span class="badge" id="cartCountBadge">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="cats" id="cats">
+          <button class="cat-btn active" data-cat="all" type="button">All</button>
+          <button class="cat-btn" data-cat="electronics" type="button">Electronics</button>
+          <button class="cat-btn" data-cat="fashion" type="button">Fashion</button>
+          <button class="cat-btn" data-cat="accessories" type="button">Accessories</button>
+          <button class="cat-btn" data-cat="home" type="button">Home</button>
+        </div>
+
+        <div class="sort">
+          <span>Sort</span>
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="priceAsc">Price: Low → High</option>
+            <option value="priceDesc">Price: High → Low</option>
+            <option value="ratingDesc">Rating: High → Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <section>
+        <div class="grid" id="productGrid"></div>
+      </section>
+
+      <aside class="side">
+        <div class="side-head">
+          <div>
+            <div class="title">Cart</div>
+            <div class="muted">Quick summary</div>
+          </div>
+          <button class="btn small subtle" id="clearCartBtn" type="button">Clear</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="summary">
+          <div class="sum-row"><span>Subtotal</span><strong id="subtotalTxt">$0.00</strong></div>
+          <div class="sum-row"><span>Delivery (demo)</span><strong id="deliveryTxt">$1.50</strong></div>
+          <div class="sum-total"><span>Total</span><span id="totalTxt">$0.00</span></div>
+          <button class="btn primary" id="checkoutBtn" type="button">Checkout</button>
+        </div>
+
+        <div class="ai-card">
+          <div class="ai-top">
+            <div class="title">AI Recommendations</div>
+            <span class="ai-pill">Demo</span>
+          </div>
+          <div class="muted small" id="aiExplain">
+            Add items to cart or wishlist, and I’ll suggest related products.
+          </div>
+          <div class="ai-list" id="aiList"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Wishlist Modal -->
+  <div class="modal" id="wishlistModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">❤️ Wishlist</div>
+        <button class="icon-btn" id="wishlistCloseBtn" type="button" aria-label="Close wishlist">✕</button>
+      </div>
+      <div id="wishlistList" class="ai-list"></div>
+      <div class="modal-actions">
+        <button class="btn subtle" id="wishlistClearBtn" type="button">Clear Wishlist</button>
+        <button class="btn primary" id="wishlistGoShopBtn" type="button">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">🧾 Checkout</div>
+        <button class="icon-btn" id="checkoutCloseBtn" type="button" aria-label="Close checkout">✕</button>
+      </div>
+
+      <div class="modal-grid">
+        <div class="field">
+          <label for="cName">Full name</label>
+          <input id="cName" placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="cPhone">Phone</label>
+          <input id="cPhone" placeholder="+855 ..." />
+        </div>
+
+        <div class="field">
+          <label for="cAddress">Address</label>
+          <input id="cAddress" placeholder="Phnom Penh, ..." />
+        </div>
+
+        <div class="field">
+          <label for="cPay">Payment (demo)</label>
+          <select id="cPay">
+            <option>Cash on Delivery</option>
+            <option>ABA Transfer</option>
+            <option>Wing</option>
+          </select>
+        </div>
+
+        <div class="field" style="grid-column: 1 / -1;">
+          <label for="cNote">Note</label>
+          <textarea id="cNote" rows="4" placeholder="Any special request..."></textarea>
+        </div>
+      </div>
+
+      <div class="summary" style="margin-top:12px;">
+        <div class="sum-row"><span>Subtotal</span><strong id="checkoutSubtotal">$0.00</strong></div>
+        <div class="sum-row"><span>Delivery (demo)</span><strong>$1.50</strong></div>
+        <div class="sum-total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn subtle" id="checkoutCancelBtn" type="button">Cancel</button>
+        <button class="btn primary" id="placeOrderBtn" type="button">Place Order (Demo)</button>
+      </div>
+
+      <p class="muted small" style="margin-top:10px;">
+        This is a UI demo. No real payment is processed.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mobile Cart Drawer -->
+  <div class="drawer-cart" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-title">Cart</span>
+      <button class="icon-btn" id="closeCartDrawerBtn" type="button" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItemsMobile"></div>
+
+    <div class="summary">
+      <div class="sum-row"><span>Subtotal</span><strong id="subtotalTxtMobile">$0.00</strong></div>
+      <div class="sum-row"><span>Delivery (demo)</span><strong id="deliveryTxtMobile">$1.50</strong></div>
+      <div class="sum-total"><span>Total</span><span id="totalTxtMobile">$0.00</span></div>
+      <button class="btn primary" id="checkoutBtnMobile" type="button">Checkout</button>
+    </div>
+
+    <div class="ai-card">
+      <div class="ai-top">
+        <div class="title">AI Recommendations</div>
+        <span class="ai-pill">Demo</span>
+      </div>
+      <div class="muted small" id="aiExplainMobile">Suggestions based on your activity.</div>
+      <div class="ai-list" id="aiListMobile"></div>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Demo-only logic -->
+  <script src="ecommerce.js"></script>
+</body>
+
+</html>
